@@ -17,5 +17,6 @@ samples, guidance on mobile development, and a full API reference.
 
 
 
-![hotel app screenshots](https://user-images.githubusercontent.com/88269367/156633566-ac9038c2-3b37-4586-b2df-8221086d09bc.png)
 
+
+![hotel1](https://user-images.githubusercontent.com/88269367/176972765-c4981f8a-e750-4c70-92ea-7bc66c80a3fb.png)     ![hotel2](https://user-images.githubusercontent.com/88269367/176972794-58810b7e-2789-4659-b809-ab8ccbd6272b.png)
