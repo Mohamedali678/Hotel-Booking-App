@@ -47,7 +47,7 @@ class DetailScreen extends StatelessWidget {
               width: double.infinity,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage(imageUrl), fit: BoxFit.cover),
+                    image: AssetImage(imageUrl), fit: BoxFit.fill),
               ),
               child: Stack(
                 children: [
@@ -57,11 +57,11 @@ class DetailScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
-                          height: 50,
+                          height: 40,
                           decoration: BoxDecoration(
                               color: Color(0xffF8FCFF),
                               borderRadius: BorderRadius.circular(12)),
-                          width: 60,
+                          width: 40,
                           child: IconButton(
                             onPressed: () {
                               Navigator.pop(context);
@@ -73,11 +73,11 @@ class DetailScreen extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          height: 50,
+                          height: 40,
                           decoration: BoxDecoration(
                               color: Color(0xffF8FCFF),
                               borderRadius: BorderRadius.circular(12)),
-                          width: 60,
+                          width: 40,
                           child: const Icon(
                             Icons.favorite_border,
                             size: 30,

@@ -1,10 +1,6 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:hotel_booking_app/screens/data.dart';
-import 'package:hotel_booking_app/screens/data_home.dart';
-import 'package:hotel_booking_app/screens/details_screen.dart';
+import 'package:hotel_booking_app/screens/get_started_screen.dart';
 import 'package:hotel_booking_app/screens/home_screen.dart';
-import 'package:hotel_booking_app/screens/menu_screen.dart';
 
 void main(List<String> args) {
   runApp(
@@ -24,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           scaffoldBackgroundColor: Color(0xffF8FCFF),
           primaryColor: Color(0xffF8FCFF)),
-      home: const HomeScreen(),
+      home: const GetStartedSreen(),
     );
   }
 }

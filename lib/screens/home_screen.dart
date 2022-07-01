@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hotel_booking_app/screens/data_home.dart';
 import 'package:hotel_booking_app/screens/details_screen.dart';
-import 'package:hotel_booking_app/screens/menu_screen.dart';
+import 'package:hotel_booking_app/screens/explore_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -10,17 +10,8 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-enum MenuSelection {
-  menu1,
-  menu2,
-  menu3,
-  menu4,
-}
-
 class _HomeScreenState extends State<HomeScreen> {
   DataHome object = DataHome();
-
-  MenuSelection? selectedOne;
 
   @override
   Widget build(BuildContext context) {
@@ -108,81 +99,39 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(
                 height: 20,
               ),
-              Container(
-                height: 50,
-                width: double.infinity,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    InkWell(
-                      onTap: () {
-                        setState(() {
-                          selectedOne = MenuSelection.menu1;
-                        });
-                      },
-                      child: MenuScreen(
-                        "Hotel",
-                        selectedOne == MenuSelection.menu1
-                            ? Color(0xff3C4657)
-                            : Color(0xffF0F1F3),
-                        selectedOne == MenuSelection.menu1
-                            ? Colors.white
-                            : Colors.grey,
-                      ),
+                    const Text(
+                      "Hotels",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
-                    InkWell(
-                      onTap: () {
-                        setState(() {
-                          selectedOne = MenuSelection.menu2;
-                        });
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ExploreScreen(),
+                          ),
+                        );
                       },
-                      child: MenuScreen(
-                        "Apartment",
-                        selectedOne == MenuSelection.menu2
-                            ? Color(0xff3C4657)
-                            : Color(0xffF0F1F3),
-                        selectedOne == MenuSelection.menu2
-                            ? Colors.white
-                            : Colors.grey,
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        setState(() {
-                          selectedOne = MenuSelection.menu3;
-                        });
-                      },
-                      child: MenuScreen(
-                          "Hostel",
-                          selectedOne == MenuSelection.menu3
-                              ? Color(0xff3C4657)
-                              : Color(0xffF0F1F3),
-                          selectedOne == MenuSelection.menu3
-                              ? Colors.white
-                              : Colors.grey),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        setState(() {
-                          selectedOne = MenuSelection.menu4;
-                        });
-                      },
-                      child: MenuScreen(
-                        "Motel",
-                        selectedOne == MenuSelection.menu4
-                            ? Color(0xff3C4657)
-                            : Color(0xffF0F1F3),
-                        selectedOne == MenuSelection.menu4
-                            ? Colors.white
-                            : Colors.grey,
+                      child: const Text(
+                        "See All",
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.blueAccent,
+                            fontWeight: FontWeight.w700),
                       ),
                     ),
                   ],
                 ),
               ),
-              SizedBox(
-                height: 15,
-              ),
+              // SizedBox(
+              //   height: 15,
+              // ),
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 12),
                 height: 270,
@@ -206,7 +155,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Container(
                         margin: EdgeInsets.symmetric(horizontal: 8),
                         height: 200,
-                        width: 250,
+                        width: 200,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
                           image: DecorationImage(
@@ -266,7 +215,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: TextStyle(
                       fontSize: 24,
                       color: Color(0xff3C4657),
-                      fontWeight: FontWeight.w500),
+                      fontWeight: FontWeight.w700),
                 ),
               ),
               const SizedBox(
